@@ -24,7 +24,7 @@ setInterval(getClock, 1000);
 const API_key = config.apikey;
 let url;
 let lat, lon, weather, city, weather_temps, feels_like;
-const bgBox = document.querySelector(".bg");
+const bgBox = document.getElementById("bg");
 
 // 현재위치 가져오기
 function success(pos) {
@@ -84,21 +84,8 @@ const render = () => {
   document.querySelector(".weather").innerHTML = weatherHTML;
 };
 const bgRender = () => {
-  if (weather_main === "Clear") {
-    bgBox.innerHTML = `<video src="./resource/clear.mp4" muted autoplay loop></video>`;
-  } else if (weather_main === "Clouds") {
-    bgBox.innerHTML = `<video src="./resource/clouds.mp4" muted autoplay loop></video>`;
-  } else if (weather_main === "Rain") {
-    bgBox.innerHTML = `<video src="./resource/rainy.mp4" muted autoplay loop></video>`;
-  } else if (weather_main === "Thunderstorm") {
-    bgBox.innerHTML = `<video src="./resource/thunderstorm.mp4" muted autoplay loop></video>`;
-  } else if (weather_main === "Thunderstorm") {
-    bgBox.innerHTML = `<video src="./resource/thunderstorm.mp4" muted autoplay loop></video>`;
-  } else if (weather_main === "Snow") {
-    bgBox.innerHTML = `<video src="./resource/thunderstorm.mp4" muted autoplay loop></video>`;
-  } else if (weather_main === "Mist" || "Haze" || "Fog") {
-    bgBox.innerHTML = `<video src="./resource/foggy.mp4" muted autoplay loop></video>`;
-  }
+  bgBox.classList = "";
+  bgBox.classList.add(weather_main.toLowerCase());
 };
 
 //3.검색기능

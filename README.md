@@ -37,6 +37,8 @@ todo
 
 13. x 검색 기능 => autocomplete
 
+23-03-02 : ios 모바일에서 동영상 배경 원활하지 않아 사진배경으로 변경
+
 배열.join(""); => 배열을 그릴때 나타나는 쉼표 지우기 ","
 참고
 https://velog.io/@chloe_park/Javascript-14.weather-API-%ED%98%B8%EC%B6%9C%ED%95%98%EA%B8%B0

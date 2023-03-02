@@ -33,16 +33,30 @@ hr {
   padding: 0;
 }
 
-.bg {
+#bg {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-image: url(../resource/bg_clear.jpg);
+  background-size: cover;
 }
-.bg video {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100vw;
-  height: 100vh;
+#bg.clear {
+  background-image: url(../resource/bg_clear.jpg);
+}
+#bg.clouds {
+  background-image: url(../resource/bg_cloud.jpg);
+}
+#bg.rain {
+  background-image: url(../resource/bg_rain.jpg);
+}
+#bg.snow {
+  background-image: url(../resource/bg_snow.jpg);
+}
+#bg.thunderstorm {
+  background-image: url(../resource/bg_thunderstorm.jpg);
+}
+#bg.mist, #bg.haze, #bg.fog {
+  background-image: url(../resource/bg_foggy.jpg);
 }
 
 .now {

@@ -27,14 +27,31 @@ hr {
   position: relative;
   padding: 0;
 }
-.bg {
+#bg {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
+  background-image: url(../resource/bg_clear.jpg);
+  background-size: cover;
+  &.clear {
+    background-image: url(../resource/bg_clear.jpg);
+  }
+  &.clouds {
+    background-image: url(../resource/bg_cloud.jpg);
+  }
+  &.rain {
+    background-image: url(../resource/bg_rain.jpg);
+  }
+  &.snow {
+    background-image: url(../resource/bg_snow.jpg);
+  }
+  &.thunderstorm {
+    background-image: url(../resource/bg_thunderstorm.jpg);
+  }
+  &.mist,
+  &.haze,
+  &.fog {
+    background-image: url(../resource/bg_foggy.jpg);
   }
 }
 
