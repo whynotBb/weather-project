@@ -166,7 +166,7 @@ const getSearchWeather = async () => {
       throw new Error(data.message);
     }
   } catch (error) {
-    console.log("catch error", error.message);
+    console.log("catch error=", error.message);
     errorRender(error.message);
   }
 };
@@ -240,22 +240,27 @@ const getForecastWeather = async () => {
   pagination();
 };
 const searchForecastWeather = async () => {
-  url = new URL(
-    `https://api.openweathermap.org/data/2.5/forecast?q=${searchWord}&appid=${API_key}`
-  );
-  let response = await fetch(url);
-  let data = await response.json();
-  forecastItem = data.list;
-  forecastItemGroup = division(forecastItem, 5);
+  try {
+    url = new URL(
+      `https://api.openweathermap.org/data/2.5/forecast?q=${searchWord}&appid=${API_key}`
+    );
+    let response = await fetch(url);
+    let data = await response.json();
+    forecastItem = data.list;
+    forecastItemGroup = division(forecastItem, 5);
 
-  console.log("검색예보", forecastItem);
-  console.log(forecastItemGroup);
+    console.log("검색예보", forecastItem);
+    console.log(forecastItemGroup);
 
-  forecastRender();
-  pagination();
+    forecastRender();
+    pagination();
+  } catch (error) {
+    // console.log("catch error", error.message);
+  }
 };
 const division = (arr, num) => {
   const length = arr.length;
+  console.log("🚀 ~ file: main.js:259 ~ division ~ length:", length);
   const divide =
     Math.floor(length / num) + (Math.floor(length % num) > 0 ? 1 : 0);
   const newArray = [];
