@@ -60,7 +60,7 @@ const getWeather = async () => {
   temp_max = data.main.temp_max - 273.15;
   temp_min = data.main.temp_min - 273.15;
   feels_like = data.main.feels_like - 273.15;
-  console.log("현재날씨", data);
+  // console.log("현재날씨", data);
   render();
   bgRender();
 };
@@ -127,7 +127,7 @@ const search = () => {
   const patternEn = /[a-zA-Z]/g;
   searchWord = searchInput.value;
   if (patternEn.test(searchWord)) {
-    console.log(searchWord);
+    // console.log(searchWord);
 
     getSearchWeather();
     searchForecastWeather();
@@ -154,7 +154,7 @@ const getSearchWeather = async () => {
     temp_min = data.main.temp_min - 273.15;
     feels_like = data.main.feels_like - 273.15;
     if (response.status == 200) {
-      console.log(data);
+      // console.log(data);
       if (!searchWordArr.includes(searchWord)) {
         searchWordArr.push(searchWord);
       }
@@ -166,7 +166,7 @@ const getSearchWeather = async () => {
       throw new Error(data.message);
     }
   } catch (error) {
-    console.log("catch error=", error.message);
+    // console.log("catch error=", error.message);
     errorRender(error.message);
   }
 };
@@ -184,7 +184,7 @@ const errorRender = (message) => {
 };
 // 검색 리스트 - 태그형식으로 최근 5개 보여주기
 const searchListRender = () => {
-  console.log("searchListRender=", searchWord, searchWordArr);
+  // console.log("searchListRender=", searchWord, searchWordArr);
   let searchWordRenderArr = searchWordArr.slice(-5);
   let searchListHTML = "";
   searchWordRenderArr.forEach((item, idx) => {
@@ -205,7 +205,7 @@ const tagDelete = (el) => {
 };
 // 태그 클릭 시 다시 검색해서 보여주기
 const reSearch = (el) => {
-  console.log(el.innerText);
+  // console.log(el.innerText);
   searchWord = el.innerText;
   getSearchWeather();
 };
@@ -233,8 +233,8 @@ const getForecastWeather = async () => {
   forecastItem = data.list;
   forecastItemGroup = division(forecastItem, 5);
 
-  console.log("예보", forecastItem);
-  console.log(forecastItemGroup);
+  // console.log("예보", forecastItem);
+  // console.log(forecastItemGroup);
 
   forecastRender();
   pagination();
@@ -249,8 +249,8 @@ const searchForecastWeather = async () => {
     forecastItem = data.list;
     forecastItemGroup = division(forecastItem, 5);
 
-    console.log("검색예보", forecastItem);
-    console.log(forecastItemGroup);
+    // console.log("검색예보", forecastItem);
+    // console.log(forecastItemGroup);
 
     forecastRender();
     pagination();
@@ -260,7 +260,6 @@ const searchForecastWeather = async () => {
 };
 const division = (arr, num) => {
   const length = arr.length;
-  console.log("🚀 ~ file: main.js:259 ~ division ~ length:", length);
   const divide =
     Math.floor(length / num) + (Math.floor(length % num) > 0 ? 1 : 0);
   const newArray = [];
