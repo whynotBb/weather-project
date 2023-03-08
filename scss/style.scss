@@ -195,7 +195,7 @@ hr {
     display: block;
     width: 60px;
     height: 60px;
-    color: #fff;
+    color: #f2f2f2;
     background-size: 100%;
   }
   &.clouds::before {
@@ -248,25 +248,27 @@ hr {
       li {
         height: 32px;
         line-height: 32px;
-        font-size: 15px;
+        font-size: 13px;
         margin-bottom: 2px;
         .material-symbols-outlined {
           vertical-align: middle;
           font-size: 18px;
+        }
+        &:nth-child(1) {
+          font-size: 15px;
+          color: #f2f2f2;
         }
         &.weather_icon::before {
           width: 25px;
           height: 25px;
         }
         &:nth-child(3) {
-          // font-size: 16px;
-          color: #fff;
+          font-size: 15px;
+          color: #f2f2f2;
         }
-        .min {
-          color: #4d93fc;
-        }
-        .max {
-          color: #fa5246;
+        &:nth-child(4),
+        &:nth-child(5) {
+          min-width: 68px;
         }
       }
     }
@@ -359,5 +361,10 @@ hr {
   .view_bx {
     top: 50px;
     width: calc(100vw - 10px);
+  }
+  .forecast_board {
+    .forecast_list {
+      padding: 0 10px;
+    }
   }
 }

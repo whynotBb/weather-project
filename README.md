@@ -10,8 +10,8 @@
 날씨 api
 https://openweathermap.org/
 
-동영상파일
-https://www.pexels.com/ko-kr/search/videos/Clear%20sky/
+동영상/사진파일
+https://www.pexels.com/ko-kr/
 
 icon
 https://fonts.google.com/
