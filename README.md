@@ -15,6 +15,7 @@
 3. 검색 기능 제공
 
    - 영문으로만 검색 가능
+
      예) jeju, seoul, gwangju, daegu, jinju, hawaii, osaka, london, new york,
 
    * 날씨에 따라 아이콘과 배경 이미지 변경
@@ -33,6 +34,11 @@ https://openweathermap.org/
 
 - API key 숨기기
 - 현재 날씨/ 날씨 예보 활용
+
+🌈기술 스택
+
+- HTML / CSS / SCSS / javascript
+- bootstrap(반응형 웹)
 
 동영상/사진파일
 https://www.pexels.com/ko-kr/
