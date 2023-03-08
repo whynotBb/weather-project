@@ -1,5 +1,7 @@
-:: How's the weather today? ::
+:: ⛅ How's the weather today? ::
+
 → https://enchanting-faloodeh-855e78.netlify.app/
+
 → open API를 이용하여 데이터를 가져와 사용자에게 실시간으로 날씨 및 도시를 검색 하여 해당 도시의 날씨 데이터 제공
 
 1. 브라우저의 현재 시간과 날씨 제공
