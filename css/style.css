@@ -55,7 +55,9 @@ hr {
 #bg.thunderstorm {
   background-image: url(../resource/bg_thunderstorm.jpg);
 }
-#bg.mist, #bg.haze, #bg.fog {
+#bg.mist,
+#bg.haze,
+#bg.fog {
   background-image: url(../resource/bg_foggy.jpg);
 }
 
@@ -101,7 +103,7 @@ hr {
 .view_bx .search_wrap .input_box .search_open {
   cursor: pointer;
 }
-.view_bx .search_wrap .input_box input[type=text] {
+.view_bx .search_wrap .input_box input[type="text"] {
   background: transparent;
   border: none;
   outline: none;
@@ -122,7 +124,7 @@ hr {
 .view_bx .search_wrap .input_box.on .search_open {
   display: none;
 }
-.view_bx .search_wrap .input_box.on input[type=text] {
+.view_bx .search_wrap .input_box.on input[type="text"] {
   width: 320px;
   padding: 0 20px;
 }
@@ -215,7 +217,9 @@ hr {
 .weather_icon.snow::before {
   background-image: url(../resource/snow.svg);
 }
-.weather_icon.mist::before, .weather_icon.haze::before, .weather_icon.fog::before {
+.weather_icon.mist::before,
+.weather_icon.haze::before,
+.weather_icon.fog::before {
   background-image: url(../resource/foggy.svg);
 }
 
@@ -270,7 +274,8 @@ hr {
   font-size: 15px;
   color: #f2f2f2;
 }
-.forecast_board .forecast_list ul li:nth-child(4), .forecast_board .forecast_list ul li:nth-child(5) {
+.forecast_board .forecast_list ul li:nth-child(4),
+.forecast_board .forecast_list ul li:nth-child(5) {
   min-width: 68px;
 }
 .forecast_board .pagination {
@@ -360,4 +365,17 @@ hr {
   .forecast_board .forecast_list {
     padding: 0 10px;
   }
+}
+.test_btn {
+  display: block;
+  font-size: 16px;
+  line-height: 38px;
+  color: #222;
+  width: 222px;
+  height: 42px;
+  border: 2px solid #222;
+  border-radius: 21px;
+  text-align: center;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.7);
 }
